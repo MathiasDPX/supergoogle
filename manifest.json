@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "SuperGoogle",
+    "version": "1.0",
+    "description": "'Superpower Google' rip-off for Firefox",
+
+    "permissions": ["storage"],
+
+    "browser_action": {
+        "default_title": "SuperGoogle",
+        "default_popup": "popup/toggle_features.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.google.com/*"],
+            "js": [
+                "common.js",
+                "features/maps.js"
+            ]
+        }
+    ]
+}

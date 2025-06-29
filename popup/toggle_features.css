@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.body {
+    padding: 0px 15px;
+}
+
+.head {
+    margin-bottom: 10px;
+    padding: 5px 5px 10px 10px;
+    text-align: center;
+    background-color: #EA4335;
+    color: #FFFFFF;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+    padding-bottom: 8px;
+}
+
+.label {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Hide the default checkbox */
+.switch input {
+    display: none;
+}
+
+/* The switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* The slider background */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.1s;
+}
+
+/* The circle inside */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom:2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+
+/* When checked */
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+    transform: translateX(20px);
+}
